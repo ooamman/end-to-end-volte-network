@@ -1,0 +1,103 @@
+# VoLTE IMS Testbed - Git Ignore
+
+# Demo results (timestamped directories)
+demo/*/
+
+# Keep demo directory structure but ignore content
+!demo/.gitkeep
+
+# Log files
+*.log
+*.pcap
+/tmp/*.log
+/tmp/*.pcap
+
+# Test results
+sip_registration_results.txt
+sip_capture.txt
+
+# Linphone config files (not part of testbed)
+.linphone*
+linphonerc-*
+
+# Build artifacts (if building from source)
+build/
+*.o
+*.so
+*.a
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.ctxt
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*.old
+
+# User-specific files
+.bash_history
+.lesshst
+.wget-hsts
+.sudo_as_admin_successful
+
+# Server files
+vscode-server.tar.gz
+.vscode-server/
+
+# SSH keys
+.ssh/
+*.pem
+*.key
+
+# MongoDB data
+.mongodb/
+
+# NPM files (if using Open5GS WebUI)
+node_modules/
+package-lock.json
+.npm/
+
+# Documentation artifacts (optional - uncomment if you want to exclude)
+# PROJECT_DELIVERABLE_SUMMARY.txt
+# VOLTE_PROJECT_RESULTS.md
+# DEMO_USAGE.md
+
+# Keep important docs
+!README.md
+!docs/*.md
+
+# Old cleanup script (superseded by new version)
+volte-cleanup.sh
+
+# System wisdom cache
+.srsran_fftwisdom
+
+# Dotnet (not needed for this project)
+.dotnet/
+
+# Local cache
+.cache/
+.local/
+
+# Test captures
+enb.log
+ue.log
+cat
