@@ -1,0 +1,29 @@
+# gNodeB configuration for ZMQ with Multi-UE support
+# 5G SA with open5gs core
+
+amf:
+  addr: 127.0.0.5                  # AMF IP address
+  bind_addr: 127.0.0.1            # Local bind address
+
+ru_sdr:
+  device_driver: zmq                # ZMQ virtual RF
+  device_args: tx_port=tcp://127.0.0.1:2000,rx_port=tcp://127.0.0.1:2001,base_srate=11.52e6
+  srate: 11.52                      # 11.52 MHz sample rate
+  tx_gain: 75
+  rx_gain: 75
+
+cell_cfg:
+  dl_arfcn: 368500                  # band n3 (FDD)
+  band: 3                           # 5G NR band 3 (1.8 GHz)
+  channel_bandwidth_MHz: 10
+  common_scs: 15
+  plmn: "00101"                     # MCC=001, MNC=01
+  tac: 1
+
+log:
+  filename: /tmp/gnb.log
+  all_level: info
+
+pcap:
+  mac_enable: false
+  ngap_enable: false

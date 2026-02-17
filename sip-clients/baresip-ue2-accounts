@@ -1,0 +1,4 @@
+# baresip accounts for UE2
+# Format: "Display Name" <sip:user@domain>;auth_pass=password;regint=600;outbound="sip:proxy"
+
+<sip:001010000000002@ims.localdomain>;auth_pass=secret456;regint=600;outbound="sip:10.45.0.1:5060"
